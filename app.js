@@ -1,58 +1,57 @@
 $(document).ready(function () {
   $.ajax({
-    url: "http://faker.hook.io/?property=name.findName",
+    url: "http://faker.hook.io/?property=name.firstName",
     method: 'GET',
     dataType: 'JSON'
-  }).done( function(res) {
-    setName(res);
+  }).done( function(firstName) {
+    setName(firstName)
   })
 
   $.ajax({
     url: "http://faker.hook.io/?property=internet.avatar",
     method: 'GET',
     dataType: 'JSON'
-  }).done(function (res) {
-    setPic(res);
+  }).done( function(pic) {
+    setPic(pic)
   })
 
   $.ajax({
     url: "http://faker.hook.io/?property=date.recent",
     method: 'GET',
     dataType: 'JSON'
-  }).done(function (res) {
-    setDate(res);
+  }).done( function(date) {
+    setDate(date)
   })
 
   $.ajax({
     url: "http://faker.hook.io/?property=hacker.phrase",
     method: 'GET',
     dataType: 'JSON'
-  }).done(function (res) {
-    setTitle(res);
+  }).done( function(title) {
+    setTitle(title)
   })
 
   $.ajax({
     url: "http://faker.hook.io/?property=lorem.paragraphs",
     method: 'GET',
     dataType: 'JSON'
-  }).done(function (res) {
-    setBody(res);
+  }).done( function(body) {
+    setBody(body)
   })
 
   function setName(name) {
-    $('#name').html(name);
+    $('#name').html(name)
   }
 
   function setPic(img) {
-    $("#profile-pic").attr("src", img)
+    $('#profile-pic').attr("src", img)
   }
 
   function setDate(date) {
     var day = moment(date).date()
-    var monthDate = moment(date).format('MMMM')
+    var month = moment(date).format('MMMM')
     var year = moment(date).year()
-    var result = monthDate + " " + day + ',' +  " " + year
-    $('#date').html(result);
+    $('#date').html(month + " " + day + "," + " " + year)
   }
   
   function setTitle(title) {
@@ -62,5 +61,4 @@ $(document).ready(function () {
   function setBody(post) {
     $('#post-body').html(post)
   }
-
 });

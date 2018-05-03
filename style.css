@@ -46,36 +46,6 @@ header a:hover {
 	padding-left: 20px;
 }
 
-/* Content */
-
-.content {
-  min-height: calc(100vh - 70px);
-  padding-bottom: 20px;
-}
-
-img {
-	float:left;
-}
-
-.blog {
-	margin: 50px auto;
-}
-
-.blog h4 {
-	padding-left: 20px;
-	padding-top: 2%;
-	float:left;
-	opacity: 0.80;
-}
-
-.post h5 {
-	opacity: 0.5;
-}
-
-.post {
-	padding-top: 5em;
-}
-
 /* Footer */ 
 
 footer {
@@ -129,4 +99,33 @@ footer .footer-right p {
 	color: #ffffff;
 	vertical-align: middle;
 	margin: 0;
+}
+
+/* Content */
+.content {
+	min-height: calc(100vh - 70px);
+	padding-bottom: 20px;
+}
+
+img {
+	float: left;
+}
+
+.blog {
+	margin: 50px auto;
+}
+
+.blog h4 {
+	padding-left: 20px;
+	padding-top: 2%;
+	float: left;
+	opacity: 0.80;
+}
+
+.post h5 { 
+	opacity: 0.5;
+}
+
+.post {
+	padding-top: 5em;
 }
